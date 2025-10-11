@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad de la Información - Presentación Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Header -->
+        <header class="presentation-header">
+            <h1 class="presentation-title">Seguridad de la Información</h1>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+            </div>
+        </header>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <!-- Slides Container -->
+        <main class="slide-container">
+            <!-- Slide 1: Portada -->
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="hero-header">
+                        <div class="hero-icon">🔒</div>
+                        <h1 class="gradient-title">Seguridad de la Información</h1>
+                        <h2 class="presentation-subtitle">Análisis Integral y Estrategias Avanzadas</h2>
+                        <p class="hero-description">Una revisión exhaustiva de principios, vulnerabilidades, amenazas y mejores prácticas en ciberseguridad</p>
+                    </div>
+                    
+                    <div class="detail-grid">
+                        <div class="detail-card">
+                            <h4>📊 Presentación</h4>
+                            <p class="no-margin text-secondary">Presentación Interactiva con elementos expandibles y navegación avanzada</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>📅 Fecha</h4>
+                            <p class="no-margin text-secondary">Octubre 2025</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>👤 pacticipantes</h4>
+                            <p class="no-margin text-secondary">Edwin Pantoja Bustos</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>🎯 Objetivo</h4>
+                            <p class="no-margin text-secondary">Proporcionar conocimientos actualizados sobre ciberseguridad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p class="highlight-note">💡 <strong>Navega usando las flechas o haz clic en las secciones expandibles para explorar contenido detallado</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Principios de seguridad -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Principios de Seguridad de la Información</h2>
+                    <p>Los fundamentos que rigen la protección de la información en sistemas digitales</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(2)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(2)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔺 Tríada CIA - Fundamentos Esenciales</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>🔒 Confidencialidad</h4>
+                                        <p><strong>Definición:</strong> Protección de información sensible contra acceso no autorizado</p>
+                                        <div class="detail-list">
+                                            <div class="detail-list-heading">Ejemplos:</div>
+                                            <li>Cifrado de datos personales en bases de datos</li>
+                                            <li>Control de acceso basado en roles (RBAC)</li>
+                                            <li>Clasificación de información por niveles</li>
+                                        </div>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">AES-256</div>
+                                            <div class="mini-stat-label">Estándar recomendado</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>✅ Integridad</h4>
+                                        <p><strong>Definición:</strong> Garantía de exactitud y completitud de datos durante su ciclo de vida</p>
+                                        <div class="detail-list">
+                                            <div class="detail-list-heading">Ejemplos:</div>
+                                            <li>Hashes criptográficos para verificación</li>
+                                            <li>Firmas digitales en documentos</li>
+                                            <li>Checksums en transmisiones</li>
+                                        </div>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">SHA-256</div>
+                                            <div class="mini-stat-label">Hash recomendado</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🔄 Disponibilidad</h4>
+                                        <p><strong>Definición:</strong> Acceso oportuno y confiable a información y servicios</p>
+                                        <div class="detail-list">
+                                            <div class="detail-list-heading">Ejemplos:</div>
+                                            <li>Sistemas redundantes y failover</li>
+                                            <li>Balanceadores de carga</li>
+                                            <li>Planes de continuidad de negocio</li>
+                                        </div>
+                                        <div class="stats-row">
+                                            <div class="mini-stat">
+                                                <div class="mini-stat-value">99.9%</div>
+                                                <div class="mini-stat-label">Uptime objetivo</div>
+                                            </div>
+                                            <div class="mini-stat">
+                                                <div class="mini-stat-value">&lt;4h</div>
+                                                <div class="mini-stat-label">RTO máximo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🛡️ Principios Adicionales de Seguridad</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>🆔 Autenticación</h4>
+                                        <ul class="detail-list">
+                                            <li>Biométrica</li>
+                                            <li>Multi-factor (MFA)</li>
+                                            <li>Certificados digitales</li>
+                                            <li>Single Sign-On (SSO)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🎯 Autorización</h4>
+                                        <ul class="detail-list">
+                                            <li>RBAC (Role-Based Access Control)</li>
+                                            <li>ABAC (Attribute-Based Access Control)</li>
+                                            <li>Principio de menor privilegio</li>
+                                            <li>Separación de funciones</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>📋 No Repudio</h4>
+                                        <ul class="detail-list">
+                                            <li>Firmas digitales</li>
+                                            <li>Logs de auditoría</li>
+                                            <li>Timestamps seguros</li>
+                                            <li>Evidencia digital</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">📋 Estándares y Marcos de Referencia</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>ISO/IEC 27001</h4>
+                                        <p>Sistema de Gestión de Seguridad de la Información</p>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">114</div>
+                                            <div class="mini-stat-label">Controles en 14 dominios</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>NIST Framework</h4>
+                                        <p>Marco de Ciberseguridad del NIST</p>
+                                        <ul class="detail-list">
+                                            <li>Identify (Identificar)</li>
+                                            <li>Protect (Proteger)</li>
+                                            <li>Detect (Detectar)</li>
+                                            <li>Respond (Responder)</li>
+                                            <li>Recover (Recuperar)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>GDPR</h4>
+                                        <p>Reglamento General de Protección de Datos</p>
+                                        <ul class="detail-list">
+                                            <li>Privacy by Design</li>
+                                            <li>Data Protection Impact Assessment</li>
+                                            <li>Derecho al olvido</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Vulnerabilidades -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Vulnerabilidades de Seguridad</h2>
+                    <p>Debilidades en sistemas que pueden ser explotadas por amenazas para comprometer la seguridad</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(3)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(3)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔍 OWASP Top 10 2021 - Vulnerabilidades Críticas</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="stats-row">
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">3.81%</div>
+                                        <div class="mini-stat-label">Apps afectadas</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">318k+</div>
+                                        <div class="mini-stat-label">Ocurrencias</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">94%</div>
+                                        <div class="mini-stat-label">Apps probadas</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>A01: Control de Acceso Roto</h4>
+                                        <p>Fallas que permiten a usuarios actuar fuera de sus permisos</p>
+                                        <ul class="detail-list">
+                                            <li>Manipulación de URL</li>
+                                            <li>Escalación de privilegios</li>
+                                            <li>Mala configuración CORS</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>A02: Fallas Criptográficas</h4>
+                                        <p>Implementación incorrecta de criptografía</p>
+                                        <ul class="detail-list">
+                                            <li>Algoritmos débiles</li>
+                                            <li>Mala gestión de claves</li>
+                                            <li>Datos sin cifrar</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>A03: Inyección</h4>
+                                        <p>Datos no confiables enviados como parte de comandos</p>
+                                        <ul class="detail-list">
+                                            <li>Inyección SQL</li>
+                                            <li>Inyección NoSQL</li>
+                                            <li>Cross-Site Scripting (XSS)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>A04: Diseño Inseguro</h4>
+                                        <p>Fallas en el diseño que comprometen la seguridad</p>
+                                        <ul class="detail-list">
+                                            <li>Falta de threat modeling</li>
+                                            <li>Patrones de diseño inseguros</li>
+                                            <li>Arquitecturas vulnerables</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>A05: Configuración Incorrecta</h4>
+                                        <p>90% de apps probadas, 4.5% incidencia</p>
+                                        <ul class="detail-list">
+                                            <li>Cuentas por defecto</li>
+                                            <li>Servicios innecesarios</li>
+                                            <li>Errores detallados</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">📊 Estadísticas Globales y Tendencias</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="stats-row">
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">280k+</div>
+                                        <div class="mini-stat-label">CVEs en base de datos</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">32%</div>
+                                        <div class="mini-stat-label">Aumento en 2024</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">60-90</div>
+                                        <div class="mini-stat-label">Días promedio para parchear</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-box">
+                                    <h4 class="highlight-title">Impacto Económico</h4>
+                                    <p class="no-margin">El costo promedio de una violación de datos ha alcanzado los <strong>$4.45 millones USD</strong>, con un tiempo promedio de <strong>277 días</strong> para identificar y contener la brecha.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🛠️ Tipos de Vulnerabilidades por Categoría</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>💻 Software</h4>
+                                        <ul class="detail-list">
+                                            <li>Buffer overflow</li>
+                                            <li>Race conditions</li>
+                                            <li>Errores de validación</li>
+                                            <li>Manejo inseguro de memoria</li>
+                                        </ul>
+                                        <p class="detail-subtext">Lenguajes afectados: C/C++, Java, JavaScript, Python</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🌐 Red</h4>
+                                        <ul class="detail-list">
+                                            <li>Puertos abiertos</li>
+                                            <li>Protocolos débiles</li>
+                                            <li>Firewall mal configurado</li>
+                                            <li>Sniffing de tráfico</li>
+                                        </ul>
+                                        <p class="detail-subtext">Herramientas: Nmap, Nessus, OpenVAS</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>👤 Humanas</h4>
+                                        <ul class="detail-list">
+                                            <li>Ingeniería social</li>
+                                            <li>Contraseñas débiles</li>
+                                            <li>Susceptibilidad al phishing</li>
+                                            <li>Falta de concienciación</li>
+                                        </ul>
+                                        <p class="detail-subtext">Prevención: Entrenamiento y simulacros</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🖥️ Físicas</h4>
+                                        <ul class="detail-list">
+                                            <li>Instalaciones no aseguradas</li>
+                                            <li>Manipulación de hardware</li>
+                                            <li>Robo de datos</li>
+                                            <li>Acceso no autorizado</li>
+                                        </ul>
+                                        <p class="detail-subtext">Controles: Cámaras, acceso biométrico</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Clasificación de vulnerabilidades -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Sistema de Clasificación CVSS</h2>
+                    <p>Sistema Común de Puntuación de Vulnerabilidades mantenido por FIRST</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(4)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(4)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="cvss-scale">
+                        <div class="cvss-category cvss-critical">
+                            <h4>Crítica</h4>
+                            <p>9.0 - 10.0</p>
+                        </div>
+                        <div class="cvss-category cvss-high">
+                            <h4>Alta</h4>
+                            <p>7.0 - 8.9</p>
+                        </div>
+                        <div class="cvss-category cvss-medium">
+                            <h4>Media</h4>
+                            <p>4.0 - 6.9</p>
+                        </div>
+                        <div class="cvss-category cvss-low">
+                            <h4>Baja</h4>
+                            <p>0.1 - 3.9</p>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🎯 Métricas Base - Características Inherentes</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Vector de Ataque (AV)</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Network:</strong> Explotable remotamente</li>
+                                            <li><strong>Adjacent:</strong> Acceso a red local requerido</li>
+                                            <li><strong>Local:</strong> Acceso local necesario</li>
+                                            <li><strong>Physical:</strong> Acceso físico requerido</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Complejidad de Ataque (AC)</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Low:</strong> Condiciones especializadas no requeridas</li>
+                                            <li><strong>High:</strong> Condiciones específicas necesarias</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Privilegios Requeridos (PR)</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>None:</strong> Sin autenticación requerida</li>
+                                            <li><strong>Low:</strong> Privilegios básicos necesarios</li>
+                                            <li><strong>High:</strong> Privilegios administrativos</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Interacción del Usuario (UI)</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>None:</strong> Sin interacción del usuario</li>
+                                            <li><strong>Required:</strong> Interacción necesaria</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-box">
+                                    <h4 class="highlight-title">Impactos (C-I-A)</h4>
+                                    <p class="no-margin"><strong>Confidencialidad, Integridad, Disponibilidad:</strong> Cada uno evaluado como None, Low o High según el impacto en el componente afectado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">⏱️ Métricas Temporales y Ambientales</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Métricas Temporales</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Exploit Code Maturity:</strong> Disponibilidad de código</li>
+                                            <li><strong>Remediation Level:</strong> Parches oficiales</li>
+                                            <li><strong>Report Confidence:</strong> Confianza en el reporte</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Métricas Ambientales</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Security Requirements:</strong> Importancia para la org.</li>
+                                            <li><strong>Modified Base Metrics:</strong> Ajustes por controles existentes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">⚠️ Limitaciones de CVSS y Alternativas</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>🚨 Limitaciones</h4>
+                                        <ul class="detail-list">
+                                            <li>No considera explotabilidad real</li>
+                                            <li>No incluye contexto del negocio</li>
+                                            <li>Puntuaciones estáticas</li>
+                                            <li>No refleja amenazas actuales</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🔄 EPSS (Alternativa)</h4>
+                                        <p><strong>Exploit Prediction Scoring System</strong></p>
+                                        <p>Predice la probabilidad de explotación basada en datos de amenazas reales y actividad de exploits.</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🎯 VPR (Alternativa)</h4>
+                                        <p><strong>Vulnerability Priority Rating</strong></p>
+                                        <p>Incorpora contexto del negocio y amenazas actuales para una priorización más efectiva.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-row">
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">v4.0</div>
+                                        <div class="mini-stat-label">Versión actual (2023)</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">FIRST</div>
+                                        <div class="mini-stat-label">Organización mantenedora</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 5: Amenazas de seguridad -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Amenazas de Seguridad de la Información</h2>
+                    <p>Panorama actual de amenazas cibernéticas y actores maliciosos</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(5)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(5)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="stats-row">
+                        <div class="mini-stat">
+                            <div class="mini-stat-value">$4.45M</div>
+                            <div class="mini-stat-label">Costo promedio de breach</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat-value">277</div>
+                            <div class="mini-stat-label">Días para identificar</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat-value">83%</div>
+                            <div class="mini-stat-label">Orgs. con múltiples breaches</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat-value">91%</div>
+                            <div class="mini-stat-label">Ataques inician con phishing</div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🦠 Malware - Software Malicioso</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>📜 Virus</h4>
+                                        <p>Código que se replica modificando otros programas</p>
+                                        <ul class="detail-list">
+                                            <li>Requiere archivo host</li>
+                                            <li>Se activa cuando se ejecuta el host</li>
+                                            <li>Puede dañar o eliminar archivos</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🐎 Troyanos</h4>
+                                        <p>Software malicioso disfrazado como legítimo</p>
+                                        <ul class="detail-list">
+                                            <li>No se replica automáticamente</li>
+                                            <li>Crea backdoors en sistemas</li>
+                                            <li>Permite acceso remoto no autorizado</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🔒 Ransomware</h4>
+                                        <p>Cifra datos y exige rescate por la recuperación</p>
+                                        <ul class="detail-list">
+                                            <li><strong>WannaCry:</strong> Ataque global 2017</li>
+                                            <li><strong>NotPetya:</strong> $10 bil. en daños</li>
+                                            <li><strong>Ryuk:</strong> Dirigido a hospitales</li>
+                                            <li><strong>Conti:</strong> Ransomware-as-a-Service</li>
+                                        </ul>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">$4.54M</div>
+                                            <div class="mini-stat-label">Costo promedio por incidente</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🕵️ Spyware & Rootkits</h4>
+                                        <p>Recopila información y oculta presencia maliciosa</p>
+                                        <ul class="detail-list">
+                                            <li>Monitoreo de actividad del usuario</li>
+                                            <li>Robo de credenciales</li>
+                                            <li>Ocultación de otros malware</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🎣 Phishing y Ingeniería Social</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>📬 Email Phishing</h4>
+                                        <p>Correos fraudulentos para robar credenciales</p>
+                                        <ul class="detail-list">
+                                            <li>Suplantación de entidades conocidas</li>
+                                            <li>URLs maliciosas</li>
+                                            <li>Adjuntos infectados</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🎯 Spear Phishing</h4>
+                                        <p>Ataques dirigidos a individuos específicos</p>
+                                        <ul class="detail-list">
+                                            <li>Investigación previa de la víctima</li>
+                                            <li>Mensajes personalizados</li>
+                                            <li>Mayor tasa de éxito</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🐋 Whale Phishing</h4>
+                                        <p>Dirigido a ejecutivos de alto nivel</p>
+                                        <ul class="detail-list">
+                                            <li>Objetivos de alto valor</li>
+                                            <li>Acceso privilegiado</li>
+                                            <li>Impacto organizacional severo</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>📱 Vishing &amp; Smishing</h4>
+                                        <p>Phishing por voz y SMS</p>
+                                        <ul class="detail-list">
+                                            <li><strong>Vishing:</strong> Llamadas fraudulentas</li>
+                                            <li><strong>Smishing:</strong> SMS maliciosos</li>
+                                            <li>Explotación de confianza telefónica</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔥 Ataques DDoS y APT</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>🌊 DDoS - Denegación de Servicio</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Volumétrico:</strong> Saturación de ancho de banda</li>
+                                            <li><strong>Protocolo:</strong> Explotación de protocolos de red</li>
+                                            <li><strong>Aplicación:</strong> Ataques a capa 7</li>
+                                        </ul>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">$20-40k</div>
+                                            <div class="mini-stat-label">Pérdidas por hora</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🏹 APT - Advanced Persistent Threats</h4>
+                                        <p>Ataques sostenidos y sigilosos</p>
+                                        <ul class="detail-list">
+                                            <li><strong>APT1:</strong> Grupo chino, ciberespionaje</li>
+                                            <li><strong>Lazarus:</strong> Corea del Norte, ataques financieros</li>
+                                            <li><strong>Cozy Bear:</strong> Rusia, espionaje gubernamental</li>
+                                            <li><strong>Fancy Bear:</strong> Rusia, operaciones militares</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-box">
+                                    <h4 class="highlight-title">Características APT</h4>
+                                    <ul class="unstyled-list">
+                                        <li>• Múltiples etapas de ataque</li>
+                                        <li>• Persistencia a largo plazo</li>
+                                        <li>• Objetivos específicos y valiosos</li>
+                                        <li>• Tácticas avanzadas de evasión</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔮 Amenazas Emergentes y Futuras</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>🤖 IA Maliciosa</h4>
+                                        <p>Ataques potenciados por inteligencia artificial</p>
+                                        <ul class="detail-list">
+                                            <li>Generación automática de phishing</li>
+                                            <li>Evasión de sistemas de detección</li>
+                                            <li>Ataques adaptativos en tiempo real</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🌐 IoT Botnets</h4>
+                                        <p>Dispositivos IoT comprometidos</p>
+                                        <ul class="detail-list">
+                                            <li>Mirai botnet</li>
+                                            <li>Cámaras de seguridad</li>
+                                            <li>Dispositivos domésticos inteligentes</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🔗 Supply Chain</h4>
+                                        <p>Ataques a proveedores y dependencias</p>
+                                        <ul class="detail-list">
+                                            <li>SolarWinds hack</li>
+                                            <li>Repositorios comprometidos</li>
+                                            <li>Componentes maliciosos</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🎥 Deepfakes</h4>
+                                        <p>Manipulación de audio/video para engaño</p>
+                                        <ul class="detail-list">
+                                            <li>Suplantación de identidad</li>
+                                            <li>Manipulación de opiniones</li>
+                                            <li>Fraude empresarial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 6: Propiedades del software seguro -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Propiedades del Software Seguro</h2>
+                    <p>Desarrollo seguro por diseño y mejores prácticas en el ciclo de vida del software</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(6)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(6)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🛡️ Secure by Design - Seguridad por Diseño</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="highlight-box">
+                                    <h4 class="highlight-title">Principios Fundamentales</h4>
+                                    <ul class="unstyled-list">
+                                        <li>• Seguridad como requisito fundamental, no complemento</li>
+                                        <li>• Threat modeling desde etapas tempranas</li>
+                                        <li>• Arquitectura defensiva con controles en capas</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="stats-row">
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">10x</div>
+                                        <div class="mini-stat-label">Menor costo de corrección</div>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <div class="mini-stat-value">50%</div>
+                                        <div class="mini-stat-label">Reducción de vulnerabilidades</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">📋 Principios OWASP de Codificación Segura</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Minimize Attack Surface</h4>
+                                        <p>Reducir funcionalidades expuestas al mínimo necesario</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Secure Defaults</h4>
+                                        <p>Configuraciones seguras por defecto</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Least Privilege</h4>
+                                        <p>Mínimos permisos necesarios para funcionar</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Defense in Depth</h4>
+                                        <p>Múltiples capas de seguridad</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Fail Securely</h4>
+                                        <p>Fallar de manera segura, no abierta</p>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Don't Trust Services</h4>
+                                        <p>Validar todos los servicios externos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔐 Prácticas de Codificación Segura</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>✅ Validación de Entrada</h4>
+                                        <ul class="detail-list">
+                                            <li>Validación obligatoria en servidor</li>
+                                            <li>Listas permitidas vs denegadas</li>
+                                            <li>Canonicalización antes de validar</li>
+                                            <li>Verificación de longitud y tipos</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>📝 Codificación de Salida</h4>
+                                        <ul class="detail-list">
+                                            <li>Codificación según contexto</li>
+                                            <li>HTML encoding para contenido web</li>
+                                            <li>URL encoding para enlaces</li>
+                                            <li>SQL encoding para consultas</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🔑 Criptografía</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Algoritmos:</strong> AES-256, RSA-2048+</li>
+                                            <li><strong>Hashing:</strong> SHA-256 o superior</li>
+                                            <li><strong>Claves:</strong> Gestión segura</li>
+                                            <li><strong>Aleatorios:</strong> Generadores criptográficos</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>👤 Autenticación</h4>
+                                        <ul class="detail-list">
+                                            <li>Políticas robustas de contraseñas</li>
+                                            <li>Multi-factor authentication (MFA)</li>
+                                            <li>Gestión segura de sesiones</li>
+                                            <li>Bloqueo por intentos fallidos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🔄 SSDLC y DevSecOps</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>📋 Secure SDLC</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Requirements:</strong> Requerimientos de seguridad</li>
+                                            <li><strong>Design:</strong> Threat modeling</li>
+                                            <li><strong>Implementation:</strong> Codificación segura</li>
+                                            <li><strong>Testing:</strong> SAST, DAST, IAST</li>
+                                            <li><strong>Deployment:</strong> Configuración segura</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>🚀 DevSecOps</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Shift Left:</strong> Seguridad desde desarrollo</li>
+                                            <li><strong>Automation:</strong> Análisis automatizado</li>
+                                            <li><strong>Monitoring:</strong> Supervisión continua</li>
+                                            <li><strong>Feedback:</strong> Bucles de retroalimentación</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="highlight-box">
+                                    <h4 class="highlight-title">Herramientas Recomendadas</h4>
+                                    <div class="stats-row">
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">SAST</div>
+                                            <div class="mini-stat-label">SonarQube, Veracode</div>
+                                        </div>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">DAST</div>
+                                            <div class="mini-stat-label">OWASP ZAP, Burp</div>
+                                        </div>
+                                        <div class="mini-stat">
+                                            <div class="mini-stat-value">SCA</div>
+                                            <div class="mini-stat-label">Snyk, WhiteSource</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 7: Conclusiones -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Conclusiones</h2>
+                    <p>Puntos clave y recomendaciones para una estrategia efectiva de seguridad</p>
+                    
+                    <div class="conclusions-grid">
+                        <div class="conclusion-section">
+                            <h3 class="conclusion-title">Puntos Clave</h3>
+                            <ul class="practices-list">
+                                <li>La seguridad requiere un enfoque integral</li>
+                                <li>Las vulnerabilidades están en constante evolución</li>
+                                <li>La capacitación del personal es fundamental</li>
+                                <li>La prevención es más eficaz que la corrección</li>
+                                <li>Los marcos estándar proporcionan guías valiosas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="conclusion-section">
+                            <h3 class="conclusion-title">Recomendaciones</h3>
+                            <ul class="practices-list">
+                                <li>Implementar controles de seguridad en capas</li>
+                                <li>Mantener software actualizado y parcheado</li>
+                                <li>Realizar evaluaciones regulares</li>
+                                <li>Educar continuamente al personal</li>
+                                <li>Desarrollar planes de respuesta a incidentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-box">
+                        <h4 class="cta-title">🎯 Llamado a la Acción</h4>
+                        <p class="cta-text">La seguridad de la información es responsabilidad de todos. Implementa estas prácticas y mantente actualizado con las últimas amenazas y soluciones.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 8: Referencias -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Referencias y Recursos</h2>
+                    <p>Fuentes autoritativas y recursos para continuar el aprendizaje en ciberseguridad</p>
+                    
+                    <div class="slide-controls">
+                        <button class="control-btn" onclick="expandAll(8)">📖 Expandir Todo</button>
+                        <button class="control-btn" onclick="collapseAll(8)">📚 Contraer Todo</button>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🏢 Organizaciones y Estándares</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>OWASP</h4>
+                                        <p><strong>Open Web Application Security Project</strong></p>
+                                        <ul class="detail-list">
+                                            <li>Top 10 Web Application Risks</li>
+                                            <li>ASVS - Application Security Verification</li>
+                                            <li>Testing Guide</li>
+                                            <li>Code Review Guide</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>NIST</h4>
+                                        <p><strong>National Institute of Standards</strong></p>
+                                        <ul class="detail-list">
+                                            <li>Cybersecurity Framework</li>
+                                            <li>SP 800-53 - Security Controls</li>
+                                            <li>SP 800-37 - Risk Management</li>
+                                            <li>Privacy Framework</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>FIRST</h4>
+                                        <p><strong>Forum of Incident Response</strong></p>
+                                        <ul class="detail-list">
+                                            <li>CVSS - Vulnerability Scoring</li>
+                                            <li>TLPWG - Traffic Light Protocol</li>
+                                            <li>Incident Response</li>
+                                            <li>Threat Intelligence</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>SANS Institute</h4>
+                                        <p><strong>Training & Research</strong></p>
+                                        <ul class="detail-list">
+                                            <li>Top 25 Most Dangerous CWEs</li>
+                                            <li>Critical Security Controls</li>
+                                            <li>Research Papers</li>
+                                            <li>Training Programs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">📋 Marcos y Estándares Técnicos</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>ISO/IEC Standards</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>27001:</strong> ISMS Management</li>
+                                            <li><strong>27002:</strong> Code of Practice</li>
+                                            <li><strong>27035:</strong> Incident Management</li>
+                                            <li><strong>27005:</strong> Risk Management</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Industry Standards</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>PCI DSS:</strong> Payment Card Security</li>
+                                            <li><strong>GDPR:</strong> Data Protection (EU)</li>
+                                            <li><strong>SOX:</strong> Sarbanes-Oxley Act</li>
+                                            <li><strong>HIPAA:</strong> Healthcare Privacy</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Technical Resources</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>CVE:</strong> Common Vulnerabilities</li>
+                                            <li><strong>NVD:</strong> National Vulnerability DB</li>
+                                            <li><strong>MITRE ATT&amp;CK:</strong> Tactics Framework</li>
+                                            <li><strong>CAPEC:</strong> Attack Patterns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">🛠️ Herramientas y Certificaciones</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Security Tools</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>Scanners:</strong> Nessus, OpenVAS</li>
+                                            <li><strong>Web Testing:</strong> Burp Suite, OWASP ZAP</li>
+                                            <li><strong>Pentesting:</strong> Metasploit, Kali Linux</li>
+                                            <li><strong>SIEM:</strong> Splunk, QRadar, ELK Stack</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Cloud Security</h4>
+                                        <ul class="detail-list">
+                                            <li>AWS Security Hub</li>
+                                            <li>Azure Security Center</li>
+                                            <li>Google Cloud Security</li>
+                                            <li>Multi-cloud Security Platforms</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Professional Certifications</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>CISSP:</strong> Security Professional</li>
+                                            <li><strong>CISM:</strong> Information Security Manager</li>
+                                            <li><strong>CEH:</strong> Ethical Hacker</li>
+                                            <li><strong>OSCP:</strong> Penetration Testing</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Learning Platforms</h4>
+                                        <ul class="detail-list">
+                                            <li>Cybrary - Free courses</li>
+                                            <li>Coursera - University programs</li>
+                                            <li>Pluralsight - Technical training</li>
+                                            <li>TryHackMe - Hands-on labs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <h3 class="expandable-title">📚 Recursos Adicionales</h3>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-inner">
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Libros Recomendados</h4>
+                                        <ul class="detail-list">
+                                            <li>The Web Application Hacker's Handbook</li>
+                                            <li>Security Engineering - Ross Anderson</li>
+                                            <li>Threat Modeling - Adam Shostack</li>
+                                            <li>The Phoenix Project - DevOps</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Conferencias</h4>
+                                        <ul class="detail-list">
+                                            <li><strong>RSA Conference:</strong> Seguridad empresarial</li>
+                                            <li><strong>Black Hat:</strong> Investigación avanzada</li>
+                                            <li><strong>DEF CON:</strong> Hacking community</li>
+                                            <li><strong>BSides:</strong> Eventos locales</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Blogs y Noticias</h4>
+                                        <ul class="detail-list">
+                                            <li>Krebs on Security</li>
+                                            <li>Schneier on Security</li>
+                                            <li>Troy Hunt's Blog</li>
+                                            <li>Dark Reading</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="detail-card">
+                                        <h4>Research Papers</h4>
+                                        <ul class="detail-list">
+                                            <li>IEEE Security & Privacy</li>
+                                            <li>ACM CCS - Computer Security</li>
+                                            <li>USENIX Security Symposium</li>
+                                            <li>NDSS - Network &amp; Distributed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-box cta-box--center cta-box--spacious">
+                        <h3 class="cta-title">🚀 ¡Gracias por su Atención!</h3>
+                        <p class="cta-text cta-text--large">Continúe explorando, aprendiendo y fortaleciendo las defensas cibernéticas de tu organización</p>
+                        <p class="cta-text margin-top-8 cta-text--muted">La ciberseguridad es un viaje continuo de mejora y adaptación</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button class="btn btn--secondary nav-button" id="prevBtn" onclick="previousSlide()">
+                ← Anterior
+            </button>
+            
+            <div class="slide-nav">
+                <div class="slide-dot active" onclick="goToSlide(0)"></div>
+                <div class="slide-dot" onclick="goToSlide(1)"></div>
+                <div class="slide-dot" onclick="goToSlide(2)"></div>
+                <div class="slide-dot" onclick="goToSlide(3)"></div>
+                <div class="slide-dot" onclick="goToSlide(4)"></div>
+                <div class="slide-dot" onclick="goToSlide(5)"></div>
+                <div class="slide-dot" onclick="goToSlide(6)"></div>
+                <div class="slide-dot" onclick="goToSlide(7)"></div>
+            </div>
+            
+            <button class="btn btn--primary nav-button" id="nextBtn" onclick="nextSlide()">
+                Siguiente →
+            </button>
+        </nav>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
