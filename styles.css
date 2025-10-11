@@ -381,11 +381,11 @@ h6 {
   margin-bottom: var(--space-8);
 }
 
-/* Inside dark areas, prefer white for minor headings */
+/* Restablecer encabezados de secciones expandibles al color primario */
 .detail-card .detail-list-heading,
 .expandable-content .detail-list-heading,
 .expandable-content .highlight-title {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .unstyled-list {
@@ -457,7 +457,7 @@ h6 {
 .expandable-title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-white);
+  color: var(--color-primary);
   margin: 0;
 }
 
@@ -528,7 +528,7 @@ h6 {
 }
 
 .detail-card h4 {
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: var(--space-8);
   font-size: var(--font-size-md);
 }
@@ -536,7 +536,7 @@ h6 {
 .detail-card h3,
 .expandable-content h3,
 .expandable-content h4 {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .detail-list {
@@ -556,20 +556,19 @@ h6 {
   border-bottom: none;
 }
 
-/* Contrast override: ensure readability inside dark gradient detail cards */
+/* Ajustes de contraste: mantener texto en color base para fondos claros */
 .detail-card,
 .detail-card p,
 .detail-card .detail-list li,
 .detail-card .detail-list li strong,
 .detail-card .detail-subtext {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .detail-card .detail-list li {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  border-bottom-color: var(--color-border);
 }
 
-/* Expandable panels: ensure all body text reads white on dark surfaces */
 .expandable-content,
 .expandable-content p,
 .expandable-content li,
@@ -579,18 +578,17 @@ h6 {
 .expandable-content .mini-stat-label,
 .expandable-content .stat-label,
 .expandable-content .text-secondary {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .expandable-content .examples-list li,
 .expandable-content .detail-list li {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  border-bottom-color: var(--color-border);
 }
 
-/* Highlight boxes inside dark sections: prefer white copy */
 .highlight-box,
 .highlight-box p {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .highlight-box {
@@ -648,7 +646,7 @@ h6 {
 .reference-section li,
 .stat-card p,
 .stat-card .stat-label {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* Lists inside dark panels: lighten separators */
@@ -656,7 +654,7 @@ h6 {
 .vulnerability-card .examples-list li,
 .threat-card .examples-list li,
 .reference-section .examples-list li {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  border-bottom-color: var(--color-border);
 }
 
 .presentation-header {
