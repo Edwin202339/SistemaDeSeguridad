@@ -13,10 +13,24 @@ const totalSlidesElement = document.getElementById('totalSlides');
 const progressFill = document.getElementById('progressFill');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const presentationNav = document.getElementById('presentationNav');
+
+// Slide titles for navbar chips
+const slideTitles = [
+    'Portada',
+    'Principios',
+    'Vulnerabilidades',
+    'CVSS',
+    'Amenazas',
+    'Software Seguro',
+    'Conclusiones',
+    'Referencias'
+];
 
 // Initialize presentation
 function initPresentation() {
     totalSlidesElement.textContent = totalSlides;
+    buildNavbar();
     updatePresentation();
 }
 
@@ -42,6 +56,9 @@ function updatePresentation() {
     // Update button states
     prevBtn.disabled = currentSlideIndex === 0;
     nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+
+    // Update navbar active state
+    updateNavbarActive();
 }
 
 // Navigation functions
@@ -64,6 +81,30 @@ function goToSlide(index) {
         currentSlideIndex = index;
         updatePresentation();
     }
+}
+
+// Build the top navbar dynamically
+function buildNavbar() {
+    if (!presentationNav) return;
+    presentationNav.innerHTML = '';
+    slideTitles.forEach((title, idx) => {
+        const chip = document.createElement('button');
+        chip.className = 'nav-chip';
+        chip.type = 'button';
+        chip.setAttribute('aria-label', `Ir a diapositiva ${idx + 1}: ${title}`);
+        chip.innerHTML = `<span class="chip-index">${idx + 1}</span><span class="chip-title">${title}</span>`;
+        chip.addEventListener('click', () => goToSlideEnhanced(idx));
+        presentationNav.appendChild(chip);
+    });
+    updateNavbarActive();
+}
+
+function updateNavbarActive() {
+    if (!presentationNav) return;
+    const chips = presentationNav.querySelectorAll('.nav-chip');
+    chips.forEach((chip, idx) => {
+        chip.classList.toggle('active', idx === currentSlideIndex);
+    });
 }
 
 // Expandable sections functionality
