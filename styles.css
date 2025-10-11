@@ -47,7 +47,7 @@
   --color-background: var(--color-cream-50);
   --color-surface: var(--color-cream-100);
   --color-text: var(--color-slate-900);
-  --color-text-secondary: var(--color-slate-500);
+  --color-text-secondary: var(--color-black);
   --color-primary: var(--color-teal-500);
   --color-primary-hover: var(--color-teal-600);
   --color-primary-active: var(--color-teal-700);
@@ -167,7 +167,9 @@
     --color-background: var(--color-charcoal-700);
     --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
-    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+   /* Forzar textos secundarios en negro también en dark mode (la app usa fondo blanco)
+     Si deseas recuperar gris en dark mode, cambia a var(--color-gray-300) con opacidad. */
+   --color-text-secondary: var(--color-black);
     --color-primary: var(--color-teal-300);
     --color-primary-hover: var(--color-teal-400);
     --color-primary-active: var(--color-teal-800);
@@ -337,6 +339,20 @@ h6 {
   color: var(--color-text-secondary);
 }
 
+/* Refuerzo: asegurar que textos "secundarios" se vean negros en todas las diapositivas */
+.slide p,
+.detail-list li,
+.mini-stat-label,
+.principle-description,
+.vulnerability-description,
+.stat-label,
+.text-secondary,
+.presentation-subtitle,
+.detail-subtext,
+.slide-counter {
+  color: var(--color-black);
+}
+
 .text-center {
   text-align: center;
 }
@@ -423,6 +439,13 @@ h6 {
   margin-bottom: var(--space-8);
 }
 
+/* Inside dark areas, prefer white for minor headings */
+.detail-card .detail-list-heading,
+.expandable-content .detail-list-heading,
+.expandable-content .highlight-title {
+  color: var(--color-white);
+}
+
 .unstyled-list {
   list-style: none;
   padding: 0;
@@ -492,7 +515,7 @@ h6 {
 .expandable-title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
+  color: var(--color-white);
   margin: 0;
 }
 
@@ -563,9 +586,15 @@ h6 {
 }
 
 .detail-card h4 {
-  color: var(--color-primary);
+  color: var(--color-white);
   margin-bottom: var(--space-8);
   font-size: var(--font-size-md);
+}
+
+.detail-card h3,
+.expandable-content h3,
+.expandable-content h4 {
+  color: var(--color-white);
 }
 
 .detail-list {
@@ -583,6 +612,43 @@ h6 {
 
 .detail-list li:last-child {
   border-bottom: none;
+}
+
+/* Contrast override: ensure readability inside dark gradient detail cards */
+.detail-card,
+.detail-card p,
+.detail-card .detail-list li,
+.detail-card .detail-list li strong,
+.detail-card .detail-subtext {
+  color: var(--color-white);
+}
+
+.detail-card .detail-list li {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Expandable panels: ensure all body text reads white on dark surfaces */
+.expandable-content,
+.expandable-content p,
+.expandable-content li,
+.expandable-content .principle-description,
+.expandable-content .vulnerability-description,
+.expandable-content .detail-subtext,
+.expandable-content .mini-stat-label,
+.expandable-content .stat-label,
+.expandable-content .text-secondary {
+  color: var(--color-white);
+}
+
+.expandable-content .examples-list li,
+.expandable-content .detail-list li {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Highlight boxes inside dark sections: prefer white copy */
+.highlight-box,
+.highlight-box p {
+  color: var(--color-white);
 }
 
 .highlight-box {
@@ -623,6 +689,34 @@ h6 {
   margin-top: var(--space-4);
 }
 
+/* Dark panels and cards: force body text to white for contrast */
+.principle-card p,
+.principle-card li,
+.principle-card .principle-description,
+.vulnerability-card p,
+.vulnerability-card li,
+.vulnerability-card .vulnerability-description,
+.threat-card p,
+.threat-card li,
+.practices-section p,
+.practices-section li,
+.conclusion-section p,
+.conclusion-section li,
+.reference-section p,
+.reference-section li,
+.stat-card p,
+.stat-card .stat-label {
+  color: var(--color-white);
+}
+
+/* Lists inside dark panels: lighten separators */
+.practices-section .practices-list li,
+.vulnerability-card .examples-list li,
+.threat-card .examples-list li,
+.reference-section .examples-list li {
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
 .presentation-header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -630,6 +724,70 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Top navigation for slides */
+.presentation-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, var(--color-surface), rgba(255,255,255,0.9));
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-8) var(--space-24);
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.nav-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 550;
+  color: var(--color-text);
+  background: rgba(var(--color-teal-500-rgb), 0.08);
+  border: 1px solid rgba(var(--color-teal-500-rgb), 0.25);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.nav-chip:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.16);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-chip.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: transparent;
+}
+
+.nav-chip .chip-index {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.8);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .presentation-nav {
+    padding: var(--space-8) var(--space-16);
+    gap: var(--space-6);
+  }
+  .nav-chip {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }
 
 .presentation-title {
@@ -1062,7 +1220,7 @@ body.loaded .slide {
     rgba(var(--color-teal-500-rgb), 0.18),
     rgba(var(--color-brown-600-rgb), 0.22)
   );
-  border-color: rgba(var(--color-teal-500-rgb), 0.45);
+  border-color: rgba(var(--color-teal-500-rgb), 0.55);
 }
 
 /* Improved expandable content */
