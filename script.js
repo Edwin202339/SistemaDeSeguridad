@@ -18,12 +18,12 @@ const presentationNav = document.getElementById('presentationNav');
 // Slide titles for navbar chips
 const slideTitles = [
     'Portada',
-    'Principios',
-    'Vulnerabilidades',
-    'CVSS',
-    'Amenazas',
-    'Software Seguro',
-    'Conclusiones',
+    'Principios de seguridad de la información.',
+    'Vulnerabilidades.',
+    'Clasifican las vulnerabilidades.',
+    '¿Qué son las amenazas a la seguridad de la información?',
+    'Propiedades del software seguro.',
+    'Conclusiones.',
     'Referencias'
 ];
 
